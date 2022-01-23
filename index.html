@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Flexbox</div>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="container">
+            <div>
+                <h1>Flexbox Crash Course</h1>
+                <p>
+                    This crash course was created by Edun Omatseye To help you learn the basics of flexbox. Flexbox is a very important and useful tool in CSS.
+                </p>
+            </div>
+            <img src="https://traversymedia.com/images/grid.svg" alt="" />
+        </div>
+    </header>
+
+    <section class="boxes">
+        <div class="container">
+            <div class="box">
+                <h2>Alignment and Space</h2>
+                <p>
+                    A more efficient way to lay out, align and distribute 
+                    among items in a container
+                </p>
+            </div>
+
+            <div class="box">
+                <h2>Alignment and Space</h2>
+                <p>
+                    A more efficient way to lay out, align and distribute 
+                    among items in a container
+                </p>
+            </div>
+
+            <div class="box">
+                <h2>Alignment and Space</h2>
+                <p>
+                    A more efficient way to lay out, align and distribute 
+                    among items in a container
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: #fff;
+        background:#333
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .navbar {
+        background: #3473e6;
+        color: #fff;
+        height: 60px;
+    }
+
+    .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        color: lightblue;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .navbar ul {
+        display: flex;
+    }
+
+
+    ul {
+        list-style-type: none;
+    }
+
+    .navbar ul li {
+        margin-left: 20px;
+        background-color: #000;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .header {
+        background-color: #0151cc;
+        color: #fff;
+        min-height: 400px;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .header img {
+        max-width: 400px;
+    }
+
+    .header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .boxes .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box {
+        flex: 1;
+        background: #0a51cc;
+        color: #fff;
+        border-radius: 10px;
+        margin: 20px 10px;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0.6);
+        padding: 15px 20px;
+    }
+
+    @media (max-width: 768px) {
+        .header .container {
+            flex-direction: column;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .boxes .container {
+            flex-direction: column;
+        }
+    }
+
+</style>
+<script src="index.js"></script>
